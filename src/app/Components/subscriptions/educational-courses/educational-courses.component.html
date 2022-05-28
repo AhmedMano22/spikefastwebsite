@@ -1,0 +1,72 @@
+<div class="container card d-flex justify-content-center align-items-center" style="margin-top:30px;padding:10px;border-radius: 10px;">
+    <h1>{{"educational courses"|translate}}</h1>
+</div>
+
+<div class="container card" style="margin-top:30px;padding:30px;border-radius: 10px;">
+    <div class="row">
+        <div class="col-md-12 col-lg-12">
+
+            <div class="item2-gl ">
+                <div class="tab-pane active">
+                    <div class="row">
+
+                        <div *ngFor="let courselist of taskArr | paginate:{ itemsPerPage: 10, currentPage: page ,totalItems:taskArrlength}" class="col-lg-4 col-md-6 col-sm-12 col-xl-4">
+                            <div class="card overflow-hidden" style="height: 650px;">
+                                <div class="ribbon ribbon-top-right text-primary"><span class="bg-danger">Offer</span></div>
+                                <div class="item-card9-img">
+                                    <div class="item-card9-imgs">
+                                        <a href="page-details.html"></a>
+                                        <img src="{{imageHost+courselist.image}}" alt="course_image" class="cover-image">
+                                    </div>
+
+                                    <div class="item-overly-trans">
+                                        <a href="page-details.html" class="bg-blue">{{courselist.type}}</a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="item-card9">
+                                        <span class="item-card-badge m-2"><i class="fa fa-language text-muted ml-1"></i>{{courselist.language}}</span>
+                                        <span class="item-card-badge m-2"><i class="fa fa-level-up text-muted ml-1"></i>{{courselist.level}}</span>
+
+
+
+                                        <a class="text-dark mt-2" [routerLink]="['/spike/edu-details/'+courselist.id]">
+                                            <h3 class="font-weight-semibold mt-2 mb-2">{{courselist.title}}</h3>
+                                        </a>
+                                        <div class="item-card9-desc mb-2">
+                                            <a class="ml-4 float-right"><span class="text-muted"><i class="fa fa-user-o text-muted ml-1"></i>{{courselist.title}}</span></a>
+                                            <a class="ml-4"><span class="text-muted"><i class="fa fa-clock-o text-muted ml-1"></i> may 11, 2019</span></a>
+                                            <a class="ml-2"><span class="text-muted"><i class="fa fa-calendar-o text-muted mr-4"></i>{{courselist.duration}}</span></a>
+                                        </div>
+                                        <p class="mb-0" [innerHtml]="courselist.desc.slice(0,40)"></p>
+                                    </div>
+                                    <div class="item-card9-cost">
+                                        <h4 class="text-dark font-weight-semibold mb-0 mt-0"> السعر&nbsp;{{courselist.price}}<span class="strike-text ml-1 text-muted fs-16">$296.00</span></h4>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="item-card9-footer d-flex" style="justify-content: space-around;">
+
+                                        <div class="d-flex justify-content-center">
+                                            <span style="padding:10px;text-align: center;" class="btn btn-primary item-card-badge"><a class="text-white p-5 new"  (click)="create(courselist.id)" >{{"subscribe" |translate}}</a></span>
+                                        </div>
+
+                                        <div class="d-flex justify-content-center" style="margin-right: 15px;">
+                                            <span style="padding:10px;text-align: center;" class="btn btn-primary item-card-badge"><a [routerLink]="['/spike/edu-details/'+courselist.id]" class="text-white p-5 new"   >{{"Read More" |translate}}</a></span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,416 @@
+<div *ngIf="currentPage === 'list' && taskid==1 ">
+    <div class="container" style="height: 500px;">
+        <div class="row" style="justify-content: center;">
+            <div style="margin: 27px;">
+                <p class="fontSiz">اشتراكات الدورات التعليميه</p>
+            </div>
+            <div class="card card-box mb-5">
+
+                <div class="table-responsive">
+
+                    <table class="table table-hover text-nowrap mb-0">
+                        <thead>
+                            <tr>
+                                <th class="bg-white text-center">{{"ID" | translate }}</th>
+                                <th class="bg-white"> {{"Image" | translate }}</th>
+                                <th class="bg-white text-center">{{"title" | translate }}</th>
+                                <th class="bg-white text-center">{{"Price" | translate }}</th>
+                                <th class="bg-white text-center">{{"rate" | translate }}</th>
+                                <th class="bg-white text-center">{{"duration" | translate }}</th>
+
+                                <th class="bg-white text-center"> {{"Publish Date" | translate }}</th>
+
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let s of courselist  | paginate: { itemsPerPage: 10, currentPage: page ,totalItems: taskArrlengthCourse}">
+                                <td class="font-weight-bold text-center">
+                                    #{{s.id}}
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar-icon-wrapper avatar-icon-sm mr-2">
+                                            <div class="avatar-icon"><img alt="..." style=" width: 35px;" src="{{imageHost+s.image}}" /></div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="font-weight-bold text-center">
+                                    {{ s.title }}
+                                </td>
+
+
+                                <td class="text-center" style="font-family: 'Cairo', sans-serif;">
+
+                                    {{ s.price }}
+
+                                </td>
+
+                                <td class="text-center" style="font-family: 'Cairo', sans-serif;">
+
+                                    {{ s.rate }}
+
+                                </td>
+                                <td class="text-center" style="font-family: 'Cairo', sans-serif;">
+
+                                    {{ s.duration }}
+
+                                </td>
+
+
+                                <td class="text-center">
+
+                                    {{ s.createdOn | date }}
+                                </td>
+
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer py-3 d-flex justify-content-center">
+                    <pagination-controls previousLabel="Previous" nextLabel="Next" class="pagination-icons pagination-first" (pageChange)="GetDataPagination((page = $event))"></pagination-controls>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div *ngIf="currentPage === 'list' && taskid==2 ">
+    <div class="container" style="height: 500px;">
+        <div class="row" style="justify-content: center;">
+            <div style="margin: 27px;">
+                <p class="fontSiz">اشتراكات التحليلات الخاصه</p>
+            </div>
+            <div class="card card-box mb-5">
+
+                <div class="table-responsive">
+
+                    <table class="table table-hover text-nowrap mb-0">
+                        <thead>
+                            <tr>
+                                <th class="bg-white text-center">{{"ID" | translate }}</th>
+
+                                <th class="bg-white text-center">{{"currency" | translate }}</th>
+                                <th class="bg-white text-center">{{"cost" | translate }}</th>
+
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let s of spicialanalysis  | paginate: { itemsPerPage: 10, currentPage: page ,totalItems: taskArrlengthspicialanalysis}">
+                                <td class="font-weight-bold text-center">
+                                    #{{s.id}}
+                                </td>
+
+
+                                <td class="font-weight-bold text-center">
+                                    {{ s.currency }}
+                                </td>
+
+
+                                <td class="text-center" style="font-family: 'Cairo', sans-serif;">
+
+                                    {{ s.cost }}
+
+                                </td>
+
+
+
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer py-3 d-flex justify-content-center">
+                    <pagination-controls previousLabel="Previous" nextLabel="Next" class="pagination-icons pagination-first" (pageChange)="GetDataPagination((page = $event))"></pagination-controls>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div *ngIf="currentPage === 'list' && taskid==3 ">
+    <div class="container" style="height: 500px;">
+        <div class="row" style="justify-content: center;">
+            <div style="margin: 27px;">
+                <p class="fontSiz">اشتراكات نظام التداول الالي</p>
+            </div>
+            <div class="card card-box mb-5">
+
+                <div class="table-responsive">
+
+                    <table class="table table-hover text-nowrap mb-0">
+                        <thead>
+                            <tr>
+                                <th class="bg-white text-center">{{"ID" | translate }}</th>
+                                <th class="bg-white"> {{"Image" | translate }}</th>
+                                <th class="bg-white text-center">{{"title" | translate }}</th>
+                                <th class="bg-white text-center">{{"Price" | translate }}</th>
+                                <th class="bg-white text-center">{{"rate" | translate }}</th>
+                                <th class="bg-white text-center">{{"duration" | translate }}</th>
+
+                                <th class="bg-white text-center"> {{"Publish Date" | translate }}</th>
+
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let s of automated  | paginate: { itemsPerPage: 10, currentPage: page ,totalItems: taskArrlengthautomated}">
+                                <td class="font-weight-bold text-center">
+                                    #{{s.id}}
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar-icon-wrapper avatar-icon-sm mr-2">
+                                            <div class="avatar-icon"><img alt="..." style=" width: 35px;" src="{{imageHost+s.image}}" /></div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="font-weight-bold text-center">
+                                    {{ s.title }}
+                                </td>
+
+
+                                <td class="text-center" style="font-family: 'Cairo', sans-serif;">
+
+                                    {{ s.price }}
+
+                                </td>
+
+                                <td class="text-center" style="font-family: 'Cairo', sans-serif;">
+
+                                    {{ s.rate }}
+
+                                </td>
+                                <td class="text-center" style="font-family: 'Cairo', sans-serif;">
+
+                                    {{ s.duration }}
+
+                                </td>
+
+
+                                <td class="text-center">
+
+                                    {{ s.createdOn | date }}
+                                </td>
+
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer py-3 d-flex justify-content-center">
+                    <pagination-controls previousLabel="Previous" nextLabel="Next" class="pagination-icons pagination-first" (pageChange)="GetDataPagination((page = $event))"></pagination-controls>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div *ngIf="currentPage === 'list' && taskid==4 ">
+    <div class="container" style="height: 500px;">
+        <div class="row" style="justify-content: center;">
+            <div style="margin: 27px;">
+                <p class="fontSiz">اشتراكات خدمة نسخ الصفقات </p>
+            </div>
+            <div class="card card-box mb-5">
+
+                <div class="table-responsive">
+
+                    <table class="table table-hover text-nowrap mb-0">
+                        <thead>
+                            <tr>
+                                <th class="bg-white text-center">{{"ID" | translate }}</th>
+                                <th class="bg-white"> {{"Image" | translate }}</th>
+                                <th class="bg-white text-center">{{"title" | translate }}</th>
+                                <th class="bg-white text-center">{{"Price" | translate }}</th>
+                                <th class="bg-white text-center">{{"rate" | translate }}</th>
+                                <th class="bg-white text-center">{{"duration" | translate }}</th>
+
+                                <th class="bg-white text-center"> {{"Publish Date" | translate }}</th>
+
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let s of copyservices  | paginate: { itemsPerPage: 10, currentPage: page ,totalItems: taskArrlengthcopyservices}">
+                                <td class="font-weight-bold text-center">
+                                    #{{s.id}}
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar-icon-wrapper avatar-icon-sm mr-2">
+                                            <div class="avatar-icon"><img alt="..." style=" width: 35px;" src="{{imageHost+s.image}}" /></div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="font-weight-bold text-center">
+                                    {{ s.title }}
+                                </td>
+
+
+                                <td class="text-center" style="font-family: 'Cairo', sans-serif;">
+
+                                    {{ s.price }}
+
+                                </td>
+
+                                <td class="text-center" style="font-family: 'Cairo', sans-serif;">
+
+                                    {{ s.rate }}
+
+                                </td>
+                                <td class="text-center" style="font-family: 'Cairo', sans-serif;">
+
+                                    {{ s.duration }}
+
+                                </td>
+
+
+                                <td class="text-center">
+
+                                    {{ s.createdOn | date }}
+                                </td>
+
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer py-3 d-flex justify-content-center">
+                    <pagination-controls previousLabel="Previous" nextLabel="Next" class="pagination-icons pagination-first" (pageChange)="GetDataPagination((page = $event))"></pagination-controls>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div *ngIf="currentPage === 'list' && taskid==5 ">
+    <div class="container" style="height: 500px;">
+        <div class="row" style="justify-content: center;">
+            <div style="margin: 27px;">
+                <p class="fontSiz">اشتراكات تدريب الفوركس </p>
+            </div>
+            <div class="card card-box mb-5">
+
+                <div class="table-responsive">
+
+                    <table class="table table-hover text-nowrap mb-0">
+                        <thead>
+                            <tr>
+                                <th class="bg-white text-center">{{"ID" | translate }}</th>
+                                <th class="bg-white"> {{"Image" | translate }}</th>
+                                <th class="bg-white text-center">{{"title" | translate }}</th>
+                                <th class="bg-white text-center">{{"Price" | translate }}</th>
+                                <th class="bg-white text-center">{{"rate" | translate }}</th>
+                                <th class="bg-white text-center">{{"duration" | translate }}</th>
+
+                                <th class="bg-white text-center"> {{"Publish Date" | translate }}</th>
+
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let s of forex  | paginate: { itemsPerPage: 10, currentPage: page ,totalItems: taskArrlengthforex}">
+                                <td class="font-weight-bold text-center">
+                                    #{{s.id}}
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar-icon-wrapper avatar-icon-sm mr-2">
+                                            <div class="avatar-icon"><img alt="..." style=" width: 35px;" src="{{imageHost+s.image}}" /></div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="font-weight-bold text-center">
+                                    {{ s.title }}
+                                </td>
+
+
+                                <td class="text-center" style="font-family: 'Cairo', sans-serif;">
+
+                                    {{ s.price }}
+
+                                </td>
+
+                                <td class="text-center" style="font-family: 'Cairo', sans-serif;">
+
+                                    {{ s.rate }}
+
+                                </td>
+                                <td class="text-center" style="font-family: 'Cairo', sans-serif;">
+
+                                    {{ s.duration }}
+
+                                </td>
+
+
+                                <td class="text-center">
+
+                                    {{ s.createdOn | date }}
+                                </td>
+
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer py-3 d-flex justify-content-center">
+                    <pagination-controls previousLabel="Previous" nextLabel="Next" class="pagination-icons pagination-first" (pageChange)="GetDataPagination((page = $event))"></pagination-controls>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

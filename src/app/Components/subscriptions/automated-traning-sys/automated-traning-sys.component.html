@@ -1,0 +1,52 @@
+<div class="container card d-flex justify-content-center align-items-center" style="margin-top:30px;padding:10px;border-radius: 10px;">
+    <h1>{{"Automated Trading System"|translate}}</h1>
+</div>
+
+<div class="container card" style="margin-top:30px;padding:30px;border-radius: 10px;">
+    <div class="tab-pane" id="tab-71">
+        <div id="profile-log-switch">
+
+
+            <div class="row">
+                <div *ngFor="let Automated of taskArr | paginate:{ itemsPerPage: 10, currentPage: page ,totalItems:taskArrlength}" class="col-lg-4 col-md-6 col-sm-12 col-xl-4">
+                    <div class="card overflow-hidden" style="height: 500px;">
+                        <div class="item-card9-img">
+                            <div class="item-card9-imgs">
+                                <a href="page-details.html"></a>
+                                <img style="max-height: 250px;" src="{{imageHost+Automated.image}}" alt="course_image" class="cover-image">
+                            </div>
+
+
+                        </div>
+                        <div class="card-body">
+                            <div class="item-card9">
+
+
+                                <a class="text-dark mt-2" [routerLink]="['/spike/details/'+Automated.id]">
+                                    <h3 class="font-weight-semibold mt-2 mb-2">{{Automated.title}}</h3>
+                                </a>
+
+                                <p class="mb-0" [innerHTML]="Automated.desc.slice(0,150)"></p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="item-card9-footer d-flex" style="justify-content: space-around;">
+
+                                <div class="d-flex justify-content-center">
+                                    <span style="padding:10px;text-align: center;" class="btn btn-primary item-card-badge"><a class="text-white p-5 new"  (click)="create(Automated.id)" >{{"subscribe" |translate}}</a></span>
+                                </div>
+                                &nbsp;&nbsp;
+                                <div class="d-flex justify-content-center">
+                                    <span style="padding:10px;text-align: center;" class="btn btn-primary item-card-badge"><a [routerLink]="['/spike/details/'+Automated.id]" class="text-white p-5 new"   >{{"Read More" |translate}}</a></span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>

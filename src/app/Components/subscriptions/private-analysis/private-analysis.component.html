@@ -1,0 +1,108 @@
+<div class="container card d-flex justify-content-center align-items-center" style="margin-top:30px;padding:10px;border-radius: 10px;">
+    <h1>{{"private analytics"|translate}}</h1>
+</div>
+
+<div class="container card" style="margin-top:30px;padding:30px;border-radius: 10px;">
+    <div class="tab-pane">
+        <div id="profile-log-switch">
+            <div class="row">
+                <div col-md-12 style="width: 100%;">
+
+
+                    <div class="card card-box mb-4">
+                        <div style="display: flex; justify-content: center; margin-top: 10px; ">
+                            <p style="text-align: right;padding: 10px;">هذه الخدمه تمكنك من الحصول علي تحليلات يوميه خاصه بالاصول الماليه المختلفة المراد تحديدها من قبل المستخدم (عملات رقيمه - اسهم - فوركس) حيث سعر الخدمه المتواجده {{analysis.total_cost}}
+                            </p>
+                        </div>
+
+                        <div class="d-flex flex-md-row flex-column align-items-center " style="  padding: 15px;  justify-content: end;">
+                            <button class="btn btn-danger" (click)="triggerModal(modalData)">{{"subscribe" | translate}}</button>
+
+                            <ng-template #modalData let-modal>
+                                <div class="modal-content col-lg-12 col-md-12 col-sm-12">
+                                    <div class="modal-header">
+
+
+                                        <div style="width: 100%; display: flex; justify-content: space-around;      margin-bottom: 11px;  ">
+                                            <div style="    width: 194px;display: flex;justify-content: center;border: 1px solid;height: 40px;align-items: center;">
+                                                {{"سعر الخدمه" |translate}} {{analysis.total_cost}}
+                                            </div>
+                                            &nbsp;&nbsp;
+                                            <div style="    width: 194px; display: flex; justify-content: center; border: 1px solid;  height: 40px;  align-items: center;">
+                                                {{"عدد الاصول" |translate}} {{analysis.total_package}}
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="modal-body" style="display: flex; justify-content: center; flex-direction: column;">
+
+                                        <form novalidate="" class="mx-auto ng-touched ng-pristine ng-valid">
+
+                                            <div class="form-body">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-7">
+                                                        <div class="adv-section-form-part">
+                                                            <label for="category_Id" class="mb-2">عملات اجنبيه</label>&nbsp;
+                                                            <select style="width: 315px;" aria-label="Default select example" id="category_Id" formControlName="category_Id" class="form-select ng-touched ng-pristine ng-valid">
+                                                             <option value="" selected >اختر الخدمه</option>
+                                                             <option  *ngFor="let s of filteredAllDiscussion">{{s.currency}} </option>
+
+
+                                                    </select>
+                                                        </div>
+                                                    </div>
+                                                    <br><br>
+                                                    <div class="col-md-7">
+                                                        <div class="adv-section-form-part">
+                                                            <label for="item_for" class="mb-2">اسهم</label>&nbsp;
+                                                            <select style="width: 315px;" aria-label="Default select example" id="item_for" formControlName="item_for" class="form-select ng-untouched ng-pristine ng-valid">
+                                                              <option value="" selected >اختر الخدمه </option>
+                                                              <option  *ngFor="let s of filteredAllDiscussion2">{{s.currency}}</option>
+
+                                                    </select>
+                                                        </div>
+                                                    </div>
+                                                    <br><br>
+                                                    <div class="col-md-7">
+                                                        <div class="adv-section-form-part">
+                                                            <label for="is_paid" class="mb-2">عملات رقميه</label>&nbsp;
+                                                            <select style="width: 315px;" aria-label="Default select example" id="is_paid" formControlName="is_paid" class="form-select ng-untouched ng-pristine ng-valid">
+                                                              <option value="" selected >اختر الخدمه</option>
+                                                              <option  *ngFor="let s of filteredAllDiscussion3">{{s.currency}}</option>
+
+
+                                                    </select>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                                <div style="display: flex; margin: 10px;">
+                                                    <button style="width: 165px;" (click)="create(1)" class="form-submit-btn mx-auto btn btn-danger"> {{"subscribe" | translate}}
+                                            </button>
+
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+
+                            </ng-template>
+
+                        </div>
+                    </div>
+
+
+
+                    <div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

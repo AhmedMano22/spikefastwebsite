@@ -1,0 +1,92 @@
+<div class="container">
+    <div class="row" style="justify-content: center;">
+        <div class="col-xl-8 col-lg-6">
+            <div class="text-left mt-5 mb-5">
+                <div style="display: flex; justify-content: center; margin: 10px;">
+                    <h3>{{"update data"|translate}}</h3>
+                </div>
+                <div class="card cardinmob">
+                    <form [formGroup]="Userform" (submit)="onUpdate(Userform.value)">
+
+
+                        <div class="form-row" style="    padding: 25px;">
+
+                            <div class="col-lg-12 col-md-12">
+
+
+                                <div class="text-center" style="text-align: center; width: 100% ;">
+                                    <img [src]="imgSrc" class="inimage" (click)="fileUploader.click()" style="border-radius: 50%; width: 50%;">
+                                </div>
+                                <br>
+
+                                <fieldset class="form-group">
+                                    <div class="custom-file  mx-auto d-block">
+                                        <input type="file" accept="image/*" #fileUploader (change)="showPreview($event)" class="custom-file-input" id="inputGroupFile01">
+                                        <label class="custom-file-label" for="inputGroupFile01">Choose
+                    Main Image</label>
+                                    </div>
+
+
+
+                                </fieldset>
+                            </div>
+
+
+
+
+                            <div class="col-md-6">
+                                <div class="position-relative form-group"><label style="margin-right: 4px;" for="firstName">{{"First Name" | translate }}</label>
+                                    <input class="form-control " id="firstName" formControlName="firstName" name="firstName" placeholder="" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="position-relative form-group"><label style="margin-right: 4px;" for="lastName">{{"Last Name"
+                  | translate }}</label>
+                                    <input class="form-control " id="lastName" formControlName="lastName" name="lastName" placeholder="" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="position-relative form-group"><label style="margin-right: 4px;" for="phone"> {{"Phone" |
+                  translate }}</label>
+                                    <input class="form-control" id="phone" formControlName="phone" name="phone" placeholder="" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="position-relative form-group"><label style="margin-right: 4px;" for="email">{{"Email" |
+                  translate }}</label>
+                                    <input class="form-control" id="email" formControlName="email" name="email" placeholder="" type="email">
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-12">
+                                <div class="position-relative form-group"><label style="margin-right: 4px;" for="password">{{"Password"
+                  | translate }}</label>
+                                    <input class="form-control" id="password" formControlName="password" name="password" placeholder="" type="password">
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div style="float: right;margin-right: 13px;">
+                            <button type="submit" style="width: 100px;" class="mt-2 btn btn-primary m-2"> {{"Update" |
+              translate}}</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+<div class="sidebar-inner-layout-overlay"></div>

@@ -1,0 +1,33 @@
+.lol {
+    color: #9d4edd;
+    /* text-decoration: underline;
+  font-weight: bold;   */
+}
+
+.horizontalMenu>.horizontalMenu-list>li {
+    font-size: 15px !important;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.menu {
+    padding: 20px 0px 20px 0px;
+}
+
+.header_change {
+    width: 100%;
+    padding: 0px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.65);
+    background-color: #170944;
+    transition: opacity 1.5s ease-out, transform 1.5s ease-in;
+}
+
+.horizontal-main {
+    background: #170944;
+}

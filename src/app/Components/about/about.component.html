@@ -1,0 +1,97 @@
+<div *ngFor="let a of About" class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="wideget-user">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 ">
+                            <div class="wideget-user-desc">
+                                <div class="c" style="display: flex ; flex-direction: column;">
+                                    <div class="wideget-user-img" style="max-width: 250px; max-height: 250px;">
+                                        <img class="" src="{{imageHost+a.logo}}" alt="img">
+                                    </div>
+                                    <div class="user-wrap">
+                                        <h4>{{a.titleA}}</h4>
+                                    </div>
+                                    <div>
+                                        <p><strong>{{"Email"|translate}} :</strong> {{a.email}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="wideget-user-info">
+
+                                <div class="wideget-user-icons" style="display: flex;height: 250px;
+                                justify-content: center;
+                                align-items: center;flex-direction: column;">
+                                    <img src="../../../assets/images/Study and analysis of competitors.gif" style="height: 210px;" alt="">
+                                    <div>
+                                        <h4>تواصل معنا عبر المنصات التاليه</h4>
+                                    </div>
+                                    <div>
+                                        <a href="{{a.facebook}}" target="_blank" style="margin: 3px;" class="facebook-bg mt-0"><i class="fa fa-facebook"></i></a>
+                                        <a href="{{a.instagram}}" target="_blank" style="margin: 3px;" class="google-bg"><i class="fa fa-instagram"></i></a>
+                                        <a href="{{a.twitter}}" target="_blank" style="margin: 3px;" class="twitter-bg"><i class="fa fa-twitter"></i></a>
+                                        <a href="{{a.youtube}}" target="_blank" style="margin: 3px;" class="dribbble-bg"><i class="fa fa-youtube"></i></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="wideget-user-tab">
+                    <div class="tab-menu-heading">
+                        <div class="tabs-menu1">
+                            <ul class="nav">
+                                <li class=""><a href="#tab-51" class="active" data-toggle="tab">{{'Profile'|translate}}</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="border-0">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab-51">
+                            <div id="profile-log-switch">
+
+                                <div class="table-responsive ">
+                                    <table class="table row table-borderless">
+                                        <tbody class="col-lg-12 col-xl-6 p-0">
+                                            <tr>
+                                                <td><strong>{{'Full Name' |translate}} :</strong> {{a.titleA}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>{{"Language"|translate}} :</strong> English,Arabic.</td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody class="col-lg-12 col-xl-6 p-0">
+
+                                            <tr>
+                                                <td><strong>{{"Email"|translate}} :</strong> {{a.email}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>{{"Phone"|translate}} :</strong> {{a.phone1}} </td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>{{"Phone"|translate}} :</strong> {{a.phone2}} </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

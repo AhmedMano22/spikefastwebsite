@@ -1,0 +1,54 @@
+<section>
+    <div class="bannerimg">
+        <div class="header-text mb-0">
+            <div class="container">
+                <div class="text-center text-white" *ngFor="let detail of taskArr">
+                    <h1 style="color:#9d4edd;font-family:Cairo;" class="">{{detail.title}}</h1>
+                    <!-- <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a style="color:#9d4edd;" href="#">{{"HOME"|translate}}</a></li>
+                        <li class="breadcrumb-item"><a style="color:#9d4edd;" href="#">{{"Market Analysis"|translate}}</a></li>
+                        <li style="color:#9d4edd;" class="breadcrumb-item active" aria-current="page">{{"Market Analysis Details" |translate}}</li>
+                    </ol> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Breadcrumb-->
+<!--/Section-->
+
+<!--Section-->
+<section class="sptb">
+    <div class="container">
+        <div class="row">
+            <div class="d-block mx-auto col-lg-8 col-md-12">
+                <div class="card blog-detail">
+                    <div *ngFor="let detail of taskArr" class="card-body">
+                        <div class="item7-card-img">
+                            <img src="{{imageHost+detail.image}}" alt="img" class="w-100">
+                            <a href="{{detail.training_url}}" target="_blank">
+                                <span class="btn badge badge-danger">{{'Youtube'|translate}}</span>
+                            </a>
+                        </div>
+                        <div class="item7-card-desc d-flex mb-2 mt-3">
+                            <a class="text-muted"><i class="fa fa-calendar-o ml-2"></i>{{detail.createdOn|date:'short'}}</a>
+
+
+                        </div>
+                        <a class="text-dark">
+                            <h2 class="font-weight-semibold">{{detail.title}}</h2>
+                        </a>
+                        <p [innerHtml]="detail.desc"></p>
+                        <div class="d-flex justify-content-center" style="float: left;">
+                            <span style="padding:10px;text-align: center;" class="btn btn-primary item-card-badge"><a class="text-white p-5" style="font-size:large;" (click)="create(detail.id)" >{{"subscribe" |translate}}</a></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+</section>

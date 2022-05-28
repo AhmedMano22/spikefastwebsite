@@ -1,0 +1,11 @@
+.modal-backdrop {
+    display: none !important;
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-body label {
+    margin-top: 11px;
+}

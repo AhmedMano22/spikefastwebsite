@@ -1,0 +1,209 @@
+<div class="container card d-flex justify-content-center align-items-center" style="margin-top:30px;padding:10px;border-radius: 10px;">
+    <h1>
+        {{"Training courses and electronic trading seminars"|translate}}
+    </h1>
+    <p>اطلع على جدول الدورات التدريبية و الويبينارات و الندوات والمحاضرات المباشرة في تعلم التداول في أسواق المال المختلفة، من تداول الأسهم السعودية وحتى أسواق العملات و الفوركس.</p>
+    <!-- <h1><countdown [config]="config"></countdown></h1> -->
+</div>
+
+
+<app-pop-up-login *ngIf="showPopUp===true"></app-pop-up-login>
+
+<div class="container card" style="margin-top:30px;padding:30px;border-radius: 10px;">
+
+    <div id="profile-log-switch">
+        <section class="sptb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12">
+                        <div class="card blog-detail">
+                            <div *ngFor="let forex of taskArr.slice(0,1)| paginate:{ itemsPerPage: 10, currentPage: page ,totalItems:taskArrlength}" class="mb-3 card-body">
+                                <div class="ribbon ribbon-top-right text-primary"><span class="bg-danger">{{forex.sponser}}</span>
+                                </div>
+
+                                <div style="position:relative;" class="item7-card-img">
+                                    <img style="max-height:270px" src="{{imageHost+forex.image}}" alt="Training courses" class="w-100">
+                                    <div class="item7-card-text">
+                                        <span class="badge badge-info">Online</span>
+                                    </div>
+                                    <div style="border-radius:10px;padding:10px;text-align:center; width:300px;position:absolute; left:15px;bottom:10px;">
+                                        <h2 style="color:brown" class="dis">
+                                            <countdown [config]="config"></countdown>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <a class="text-dark" [routerLink]="['/spike/forix-details/'+forex.id]">
+                                    <p class="font-weight-semibold">{{forex.title}}</p>
+                                </a>
+                                <div class=" d-flex mb-2 mt-3">
+                                    <a class="text-muted w" style="width: 100px ;text-align: center"><i
+                                    class="fa fa-user-o text-muted ml-2"></i>{{forex.speakers}}</a>
+                                    <a class="text-muted">|&nbsp;</a>
+                                    <a class="text-muted w" style="text-align: center"><i
+                                      class="fa fa-calendar-o ml-2"></i>{{forex.date | date: 'dd/MM/yy'}}</a>
+                                    <a class="text-muted">&nbsp;|&nbsp;</a>
+                                    <a class="text-muted w" style="text-align: center"><i
+											class="fa fa-clock-o text-muted ml-2"></i>{{forex.duration}}</a>
+                                    <a class="text-muted">&nbsp;|&nbsp;</a>
+                                    <a class="text-muted w" style="text-align: center"><i
+											class="fa fa-credit-card-alt text-muted ml-2"></i>{{forex.price}}</a>
+
+                                </div>
+                                <div class="mr-auto" style="display: flex;
+                                width: 100%;
+                                justify-content: end;">
+                                    <a style="color:white ;width: 85px;" (click)="create(forex.id)" class="btn btn-primary">سجل الان</a>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 b">
+                        <div class="card blog-detail col-xl-6 col-lg-6 col-md-6">
+                            <div *ngFor="let forex of taskArr.slice(1,2)| paginate:{ itemsPerPage: 10, currentPage: page ,totalItems:taskArrlength}" class="mb-3 card-body">
+                                <div class="ribbon ribbon-top-right text-primary"><span class="bg-danger">{{forex.sponser}}</span>
+                                </div>
+
+                                <div style="position:relative;" class="item7-card-img">
+                                    <img style="max-height:270px ;height: 200px;" src="{{imageHost+forex.image}}" alt="Training courses" class="w-100">
+                                    <div class="item7-card-text">
+                                        <span class="badge badge-info">Online</span>
+                                    </div>
+                                    <div style="border-radius:10px;padding:10px;text-align:center; width:300px;position:absolute; left:15px;bottom:10px;">
+
+                                    </div>
+                                </div>
+                                <a class="text-dark" [routerLink]="['/spike/forix-details/'+forex.id]">
+                                    <p class="font-weight-semibold">{{forex.title}}</p>
+                                </a>
+                                <div class=" d-flex mb-2 mt-3">
+                                    <a class="text-muted w" style="width: 100px ;text-align: center"><i
+                                  class="fa fa-user-o text-muted ml-2"></i>{{forex.speakers}}</a>
+                                    <a class="text-muted">|&nbsp;</a>
+                                    <a class="text-muted w" style="text-align: center"><i
+                                    class="fa fa-calendar-o ml-2"></i>{{forex.date | date: 'dd/MM/yy'}}</a>
+                                    <a class="text-muted">&nbsp;|&nbsp;</a>
+                                    <a class="text-muted w" style="text-align: center"><i
+                    class="fa fa-clock-o text-muted ml-2"></i>{{forex.duration}}</a>
+                                    <a class="text-muted">&nbsp;|&nbsp;</a>
+                                    <a class="text-muted w" style="text-align: center"><i
+                    class="fa fa-credit-card-alt text-muted ml-2"></i>{{forex.price}}</a>
+
+                                </div>
+
+
+
+                                <div class="d-flex " style="justify-content: flex-end; align-items: center;">
+
+                                    <a style="color:white ;width: 85px;" (click)="create(forex.id)" class="btn btn-primary">سجل الان</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card blog-detail col-xl-6 col-lg-6 col-md-6">
+                            <div *ngFor="let forex of taskArr.slice(2,3)| paginate:{ itemsPerPage: 10, currentPage: page ,totalItems:taskArrlength}" class="mb-3 card-body">
+                                <div class="ribbon ribbon-top-right text-primary"><span class="bg-danger">{{forex.sponser}}</span>
+                                </div>
+
+                                <div style="position:relative;" class="item7-card-img">
+                                    <img style="max-height:270px ;height: 200px;" src="{{imageHost+forex.image}}" alt="Training courses" class="w-100">
+                                    <div class="item7-card-text">
+                                        <span class="badge badge-info">Online</span>
+                                    </div>
+                                    <div style="border-radius:10px;padding:10px;text-align:center; width:300px;position:absolute; left:15px;bottom:10px;">
+
+                                    </div>
+                                </div>
+                                <a class="text-dark" [routerLink]="['/spike/forix-details/'+forex.id]">
+                                    <p class="font-weight-semibold">{{forex.title}}</p>
+                                </a>
+                                <div class=" d-flex mb-2 mt-3">
+                                    <a class="text-muted w" style="width: 100px ;text-align: center"><i
+                                  class="fa fa-user-o text-muted ml-2"></i>{{forex.speakers}}</a>
+                                    <a class="text-muted">|&nbsp;</a>
+                                    <a class="text-muted w" style="text-align: center"><i
+                                    class="fa fa-calendar-o ml-2"></i>{{forex.date | date: 'dd/MM/yy'}}</a>
+                                    <a class="text-muted">&nbsp;|&nbsp;</a>
+                                    <a class="text-muted w" style="text-align: center"><i
+                                      class="fa fa-clock-o text-muted ml-2"></i>{{forex.duration}}</a>
+                                    <a class="text-muted">&nbsp;|&nbsp;</a>
+                                    <a class="text-muted w" style="text-align: center"><i
+                    class="fa fa-credit-card-alt text-muted ml-2"></i>{{forex.price}}</a>
+
+                                </div>
+
+
+
+                                <div class="d-flex " style="justify-content: flex-end; align-items: center;">
+
+                                    <a style="color:white ;width: 85px;" (click)="create(forex.id)" class="btn btn-primary">سجل الان</a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <h3 style="padding: 15px;">{{"Upcoming courses and seminars" |translate}}</h3>
+                    <div class="col-xl-12 col-lg-12 col-md-12" style="display: flex;">
+
+                        <div class="card blog-detail ">
+                            <div *ngFor="let forex of taskArr.slice(2,3)| paginate:{ itemsPerPage: 10, currentPage: page ,totalItems:taskArrlength}" class="mb-3 card-body">
+
+                                <div>
+                                    <div class="item-card9">
+
+                                        <div style="width: 279px; height: 80px; display: flex; ">
+                                            <div style="width: 60%; height: 100%;">
+
+                                                <img src="{{imageHost+forex.image}}" style="height: 80px;width: 80px ; border-radius: 50px;" alt="">
+                                            </div>
+
+                                            <div>
+                                                <a [routerLink]="['/spike/forix-details/'+forex.id]" class="text-dark" style="margin:20px;letter-spacing: 1.5px;">
+                                                    <p class="font-weight-semibold mt-1">{{forex.title}}</p>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div style="display: flex;flex-direction: column;">
+
+                                            <div style="display: flex;
+                                               margin: 14px 0 14px 14px;">
+                                                <a class="text-muted w" style="margin-left: 8px;"><i
+                                        class="fa fa-calendar-o ml-2"></i>{{forex.date | date: 'dd/MM/yy'}}</a>
+                                                <a class="text-muted " style="margin-left: 8px;">|&nbsp;</a>
+                                                <a class="text-muted w" style="margin-left: 8px;"><i
+                                          class="fa fa-user-o text-muted ml-2" style="margin-left: 8px;"></i>{{forex.speakers}}</a>
+                                                <a class="text-muted" style="margin-left: 8px;">|&nbsp;</a>
+                                                <a class="text-muted w" style="margin-left: 8px;"><i
+                                            class="fa fa-clock-o text-muted ml-2"></i>{{forex.duration}}</a>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div style="display: flex;justify-content: flex-end;">
+                                        <a style="color:white ;width: 85px;" (click)="create(forex.id)" class="btn btn-primary">سجل الان</a>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

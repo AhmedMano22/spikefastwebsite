@@ -1,0 +1,108 @@
+<!--Breadcrumb-->
+
+
+<!-- <div class="cover-image bg-background3" data-image-src="../assets/images/banners/banner2.jpg">
+    <section>
+        <div class="bannerimg">
+            <div class="header-text mb-0">
+                <div class="container">
+                    <div class="text-center text-white">
+                        <h1 class="">Register</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div> -->
+<!--/Breadcrumb-->
+
+<!--Register-section-->
+
+<section class="sptb">
+    <div class="container customerpage">
+        <div class="row">
+            <div class="single-page">
+                <div class="col-lg-5 col-xl-4 col-md-6 d-block mx-auto">
+                    <div class="wrapper wrapper2">
+                        <form [formGroup]="Userform" (submit)="onSubmit(Userform.value)"id="Register" class="card-body" tabindex="500">
+                            <h3>{{"Register"|translate}}</h3>
+                            <div class="form-row">
+
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="text-center" style="text-align: center; width: 100% ;">
+                                        <img [src]="imgSrc" height="150" class="inimage" (click)="fileUploader.click()">
+                                    </div>
+                                    <br>
+
+                                    <fieldset class="form-group">
+                                        <div class="custom-file  mx-auto d-block">
+                                            <input type="file" accept="image/*" #fileUploader
+                                                (change)="showPreview($event)" class="custom-file-input"
+                                                id="inputGroupFile01">
+                                            <label class="custom-file-label" for="inputGroupFile01">{{"Choose Main Image"|translate}}</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="position-relative form-group"><label for="firstName">{{"First Name"|translate}} </label>
+                                        <input class="form-control " id="firstName" formControlName="firstName"
+                                            name="firstName" placeholder="" type="text">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="position-relative form-group"><label for="lastName">{{"Last Name"|translate}} </label>
+                                        <input class="form-control " id="lastName" formControlName="lastName"
+                                            name="lastName" placeholder="" type="text">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="position-relative form-group"><label for="lastName">{{"Address"|translate}} </label>
+                                        <input class="form-control " id="address" formControlName="address"
+                                            name="address" placeholder="" type="text">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="position-relative form-group"><label for="phone">{{"Phone"|translate}} </label>
+                                        <input class="form-control" id="phone" formControlName="phone" name="phone"
+                                            placeholder="" type="text">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="position-relative form-group"><label for="email">{{"Email"|translate}} </label>
+                                        <input class="form-control" id="email" formControlName="email" name="email"
+                                            placeholder="" type="email">
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-12">
+                                    <div class="position-relative form-group"><label for="password">{{"Password"|translate}}</label>
+                                        <input class="form-control" id="password" formControlName="password"
+                                            name="password" placeholder="" type="password">
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="submit">
+                                <button [disabled]="!isSubmitted" type="submit" class="btn btn-primary btn-block">{{"Register"|translate}}</button>
+                            </div>
+
+                            <p class="text-dark mb-0">{{"Already have an account?"|translate}}<a routerLink="/user/login" class="text-primary ml-1">&nbsp;{{"LOGIN"|translate}}</a></p>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Register-section-->
+

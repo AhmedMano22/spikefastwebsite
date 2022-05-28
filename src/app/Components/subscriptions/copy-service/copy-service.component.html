@@ -1,0 +1,81 @@
+<div class="container card d-flex justify-content-center align-items-center" style="margin-top:30px;padding:10px;border-radius: 10px;">
+    <h1>{{"Deal copy service"|translate}}</h1>
+</div>
+
+<div class="container card" style="margin-top:30px;padding:30px;border-radius: 10px;">
+    <div class="row">
+
+        <div class="col-md-12 col-lg-12">
+
+            <div class="item2-gl ">
+                <div class="tab-pane active col-xl-12 col-lg-12 col-md-12">
+                    <div class="row">
+
+                        <div class="col-md-12 col-lg-12" style="display: flex;">
+                            <div class="card col-md-12 col-lg-12">
+
+                                <div *ngFor="let copyservice of taskArr.slice(0,1) | paginate: { itemsPerPage: 10, currentPage: page ,totalItems:taskArrlength}" class="card-body ">
+                                    <div>
+                                        <img src="{{imageHost+copyservice.image}}" style=" object-fit: cover;" class="cover-image" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="item-card9">
+
+
+
+                                            <a class="text-dark mt-2" [routerLink]="['/spike/copyService-details/'+copyservice.id]">
+                                                <h3 class="font-weight-semibold mt-2 mb-2">{{copyservice.title}}</h3>
+                                            </a>
+
+                                            <p class="mb-0" [innerHtml]="copyservice.desc.slice(0,150)"></p>
+                                        </div>
+                                        <br>
+                                        <h4 class="mb-4 font-weight-bold"> مميزات الباقه</h4>
+                                        <div class="row">
+                                            <div class="col-xl-6 col-md-12">
+                                                <ul class="list-unstyled widget-spec mb-0">
+                                                    <li class="">
+                                                        <i class="fa fa-star text-muted w-5"></i>{{copyservice.feature_1}}
+                                                    </li>
+                                                    <li class="">
+                                                        <i class="fa fa-star text-muted w-5"></i> {{copyservice.feature_2}}
+                                                    </li>
+                                                    <li class="">
+                                                        <i class="fa fa-star text-muted w-5"></i> {{copyservice.feature_3}}
+                                                    </li>
+                                                    <li class="">
+                                                        <i class="fa fa-star text-muted w-5"></i> {{copyservice.feature_4}}
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="item-card9-footer d-flex" style="justify-content: center;">
+
+                                                <div class="d-flex justify-content-center">
+                                                    <span style="padding:10px;text-align: center;" class="btn btn-primary item-card-badge"><a class="text-white p-5 new"  (click)="create(copyservice.id)" >{{"subscribe" |translate}}</a></span>
+                                                </div>
+                                                <div class="d-flex justify-content-center" style="margin-right: 15px;">
+                                                    <span style="padding:10px;text-align: center;" class="btn btn-primary item-card-badge"><a [routerLink]="['/spike/copyService-details/'+copyservice.id]" class="text-white p-5 new"   >{{"Read More" |translate}}</a></span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>

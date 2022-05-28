@@ -1,0 +1,21 @@
+<div class=" container app-content my-3 my-md-5">
+    <div class="side-app">
+        <div class="page-header my-5" style="display: flex;justify-content: center; text-align: center;">
+            <h4 class="page-title">الشروط والحكام</h4>
+
+        </div>
+
+
+        <div class="row ">
+            <div *ngFor="let term of Terms" class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4><b>{{term.titleA}}</b></h4>
+                        <p>{{term.descA}}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

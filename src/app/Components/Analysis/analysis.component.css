@@ -1,0 +1,39 @@
+.card-footer {
+    background-color: #4b5d73 !important;
+}
+
+.nav li a {
+    color: white;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .b {
+        display: flex;
+    }
+}
+
+@media (min-width: 768px) {
+    .b3 {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .b3 {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .text {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 991px) {
+    .test {
+        display: flex;
+        flex-direction: column;
+    }
+}

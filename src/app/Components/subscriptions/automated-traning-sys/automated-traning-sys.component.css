@@ -1,0 +1,11 @@
+@media (max-width: 420px) {
+    .new {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 421px) {
+    .new {
+        font-size: 15px;
+    }
+}

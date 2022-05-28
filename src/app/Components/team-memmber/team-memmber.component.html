@@ -1,0 +1,43 @@
+<div>
+    <hr>
+    <div style="display: flex;
+    justify-content: center;">
+        <h3 class="text-right">{{'Team Memmbers'|translate}}</h3>
+    </div>
+    <hr>
+    <div class="row">
+        <div *ngFor="let team of TeamMemmber" class="col-xl-4 col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="team-section text-center">
+                        <div class="team-img">
+                            <img style="height: 150px;" src="{{imageHost+team.image}}" class="img-thumbnail rounded-circle alt=" alt="img">
+                        </div>
+                        <h3 class="font-weight-bold dark-grey-text mt-4">{{team.firstName}} {{team.lastName}}</h3>
+                        <br>
+                        <h5></h5>
+                        <h6 class="font-weight-bold blue-text ">{{team.email}}</h6> <br>
+                        <h5>developer</h5> <br>
+                        <div>
+                            <a style="margin: 3px;"><i style="width: 25px; text-align: center; ;" class="fa fa-facebook"></i></a>
+                            <a style="margin: 3px;"><i  style="width: 25px; text-align: center; ;" class="fa fa-instagram"></i></a>
+                            <a style="margin: 3px;"><i  style="width: 25px; text-align: center; ;"  class="fa fa-twitter"></i></a>
+                            <a style="margin: 3px;"><i  style="width: 25px; text-align: center; ;"  class="fa fa-youtube"></i></a>
+
+                        </div>
+                        <!-- <p class="font-weight-normal dark-grey-text">
+                            <i class="fa fa-quote-left pl-2"></i>Lorem ipsum dolor sit amet, consectetur
+                        </p> -->
+                        <!-- <div class="text-warning">
+                            <i class="fa fa-star"> </i>
+                            <i class="fa fa-star"> </i>
+                            <i class="fa fa-star"> </i>
+                            <i class="fa fa-star"> </i>
+                            <i class="fa fa-star-half-full"> </i>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,90 @@
+<div class="container card d-flex justify-content-center align-items-center" style="margin-top:30px;padding:10px;border-top-left-radius: 10px;border-top-right-radius: 10px;">
+    <h1>{{'Trading Companies'|translate}}</h1>
+</div>
+
+<div class="app-content my-3 my-md-5">
+    <div class="side-app">
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <div>
+                    <p style="text-align: right;">
+                        <span><strong>تحذير المخاطر:</strong></span> ينطوي التداول في الأدوات المالية و/ أو العملات الرقمية على مخاطر عالية بما في ذلك مخاطر فقدان بعض أو كل مبلغ الاستثمار الخاص بك، وقد لا يكون مناسبًا لجميع المستثمرين. فأسعار العملات
+                        الرقمية متقلبة للغاية وقد تتأثر بعوامل خارجية مثل الأحداث المالية أو السياسية. كما يرفع التداول على الهامش من المخاطر المالية. قبل اتخاذ قرار بالتداول في الأدوات المالية أو العملات الرقمية، يجب أن تكون على دراية كاملة بالمخاطر
+                        والتكاليف المرتبطة بتداول الأسواق المالية، والنظر بعناية في أهدافك الاستثمارية، مستوى الخبرة، الرغبة في المخاطرة وطلب المشورة المهنية عند الحاجة. Fusion Media تود تذكيرك بأن البيانات الواردة في هذا الموقع ليست بالضرورة دقيقة أو
+                        في الوقت الفعلي
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="border-0">
+                            <div class="tab-content">
+                                <div>
+                                    <div id="profile-log-switch">
+                                        <div class="row">
+                                            <div col-md-12>
+                                                <h3>{{"Brokerage Companies Directory"|translate}}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12 col-lg-12">
+                                            <div class="card">
+
+                                                <div class="table-responsive">
+                                                    <table class="table card-table table-vcenter text-nowrap table-primary">
+                                                        <thead class="bg-primary text-white">
+                                                            <tr>
+                                                                <th class="text-white text-center">{{"Broker Name"|translate}}</th>
+                                                                <th class="text-white text-center">{{"Main Country"|translate}}</th>
+                                                                <th class="text-white text-center">{{"Media Type"|translate}}</th>
+                                                                <th class="text-white text-center">{{"Oversight Bodies"|translate}}</th>
+                                                                <th class="text-white text-center">{{"Minimum Account Amount"|translate}}</th>
+                                                                <th class="text-white text-center">{{"Registration Explanation"|translate}}</th>
+                                                                <th class="text-white text-center">{{"Register now"|translate}}</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr *ngFor="let Trade of taskArr | paginate: { itemsPerPage: 10, currentPage: page ,totalItems:taskArrlength}">
+                                                                <!-- <td class="text-center">{{imageHost+Trade.image}}</td> -->
+                                                                <td class="text-center">{{Trade.title}}</td>
+                                                                <td class="text-center">{{Trade.headquarters}}</td>
+                                                                <td class="text-center">{{Trade.mediator_Type}}</td>
+                                                                <td class="text-center">{{Trade.supervisory_Organizations}}</td>
+                                                                <td class="text-center">{{Trade.minimum_account_amount}}</td>
+                                                                <td class="text-center">
+                                                                    <a routerLink="/spike/educational"></a>Link</td>
+                                                                <td class="text-center">{{Trade.register_url}}</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!-- table-responsive -->
+                                            </div>
+
+                                            <!-- <div class="py-3 d-flex justify-content-center">
+                                                <pagination-controls previousLabel="Previous" nextLabel="Next" class="pagination-icons pagination-first"
+                                                (pageChange)="GetDataPagination((page = $event))"></pagination-controls>
+                                            </div> -->
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p style="text-align: right;">
+                        <span><strong>تحذير المخاطر:</strong></span> ينطوي التداول في الأدوات المالية و/ أو العملات الرقمية على مخاطر عالية بما في ذلك مخاطر فقدان بعض أو كل مبلغ الاستثمار الخاص بك، وقد لا يكون مناسبًا لجميع المستثمرين. فأسعار العملات
+                        الرقمية متقلبة للغاية وقد تتأثر بعوامل خارجية مثل الأحداث المالية أو السياسية. كما يرفع التداول على الهامش من المخاطر المالية. قبل اتخاذ قرار بالتداول في الأدوات المالية أو العملات الرقمية، يجب أن تكون على دراية كاملة بالمخاطر
+                        والتكاليف المرتبطة بتداول الأسواق المالية، والنظر بعناية في أهدافك الاستثمارية، مستوى الخبرة، الرغبة في المخاطرة وطلب المشورة المهنية عند الحاجة. Fusion Media تود تذكيرك بأن البيانات الواردة في هذا الموقع ليست بالضرورة دقيقة أو
+                        في الوقت الفعلي
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

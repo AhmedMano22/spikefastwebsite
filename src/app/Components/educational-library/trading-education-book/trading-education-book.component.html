@@ -1,0 +1,103 @@
+<div class="container card d-flex justify-content-center align-items-center" style="margin-top:30px;padding:10px;border-radius: 10px;">
+    <h1>
+        {{"Trading education books in the financial markets"|translate}}
+    </h1>
+</div>
+
+<div class="container card" style="margin-top:30px;padding:30px;border-radius: 10px;">
+    <div class="app-content my-3 my-md-5">
+        <div class="side-app col-xl-12 col-lg-12 col-md-12">
+
+            <div class="row blog-grid">
+
+
+
+                <div class="b col-lg-12 col-md-12 col-sm-12">
+                    <div class="card col-lg-8 col-md-7 col-sm-12" style="display: block;">
+
+                        <div *ngFor="let book of taskArr | paginate: { itemsPerPage: 10, currentPage: page ,totalItems:taskArrlength}" class="card-body " style="    height: 305px;">
+
+                            <div class="item-card9" style="display: flex;">
+
+
+                                <img src="{{imageHost+book.image}}" style="height: 125px; width: 88px;" alt=""> &nbsp;&nbsp;&nbsp;
+                                <div class="mt-2 mb-2" style="width: 800px">
+                                    <a [routerLink]="['/spike/book-details/'+book.id]" class="text-dark">
+                                        <h3 class="font-weight-semibold mt-1">{{book.title}}</h3>
+                                    </a>
+                                    <p class="mb-0 leading-tight" [innerHtml]="book.desc"> </p>
+                                    <div style="  margin: 7px 0 14px 14px;">
+                                        <a href="#" class="ml-4 float-right"><span class="text-muted fs-13"><i class="fa fa-user-o text-muted ml-1"></i>{{book.publisher}}</span></a>
+                                        <a class="ml-4"><span class="text-muted fs-13"><i class="fa fa-clock-o text-muted ml-1"></i> {{book.createdOn|date:'short'}}</span></a>
+                                    </div>
+                                    <div style="width: 100%; display: flex; justify-content: end; align-items: center; ">
+                                        <a [routerLink]="['/spike/book-details/'+book.id]" class="text-white btn btn-primary btn-lg">{{"Read More"|translate}}</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4 col-md-5 col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">{{"Training courses and electronic trading seminars"|translate}}</h3>
+                            </div>
+                            <div class="card-body">
+                                <div *ngFor="let lec of lecture.slice(0,1)" style="background-color: #f6f6f6;">
+                                    <div>
+                                        <a [routerLink]="['/spike/schedualoftrading']"><img style="height:170px;" class="d-block w-100" alt="" src="{{imageHost+lec.image}}"></a>
+                                    </div>
+                                    <div>
+                                        <a [routerLink]="['/spike/schedualoftrading']">
+                                            <h3>{{lec.title}}</h3>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a class="ml-4"><span class="text-muted fs-13"><i class="fa fa-clock-o text-muted ml-1"></i> {{lec.date|date:'short'}}</span></a>
+                                    </div>
+                                    <div style="margin-bottom: 35px;">
+                                        <h3>أ.{{lec.speakers}}</h3>
+                                    </div>
+                                    <div style="display: flex;justify-content: space-between;">
+                                        <h3>مجانا عبر الانترنت</h3>
+                                        <a style="color:white ;width: 85px;" (click)="create(lec.id)" class="btn btn-primary">سجل الان</a>
+                                    </div>
+                                </div>
+
+                                <div *ngFor="let lec of lecture.slice(1,3)" style="    margin-top: 60px;">
+                                    <div style="display: flex; flex-direction: row; ">
+                                        <div>
+                                            <a [routerLink]="['/spike/schedualoftrading']"><img style="height:170px;     height: 80px;
+                                                                                  width: 80px;
+                                                                                  border-radius: 50px;
+                                                                                  margin: 8px;
+                                                                              " class="d-block" alt="" src="{{imageHost+lec.image}}"></a>
+                                        </div>
+
+                                        <div class="b3" style="display: flex; flex-direction: column; justify-content: center;">
+                                            <a [routerLink]="['/spike/schedualoftrading']">
+                                                <p style="margin: 0;">{{lec.title}}</p>
+                                            </a>
+                                            <a class="ml-4"><span class="text-muted fs-13"><i class="fa fa-clock-o text-muted ml-1"></i> {{lec.date|date:'short'}}</span></a>
+                                            <p>أ.{{lec.speakers}}</p>
+                                        </div>
+                                    </div>
+
+                                    <div style="display: flex;justify-content: space-between; margin-top: 50px;">
+                                        <h4>مجانا عبر الانترنت</h4>
+                                        <a style="color:white ;width: 85px;" (click)="create(lec.id)" class="btn btn-primary">سجل الان</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

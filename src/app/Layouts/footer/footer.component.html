@@ -1,0 +1,124 @@
+<!--Footer Section-->
+<section>
+    <footer class="bg-dark text-white">
+        <div class="footer-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12">
+                        <h6>{{'About'|translate}}</h6>
+                        <hr class="deep-purple  accent-2 mb-4 mt-0 d-inline-block mx-auto">
+                        <p class="mb-0">موقع سبايك فاست المالية توفر البيانات في الوقت الحقيقي، الأسعار، الرسوم البيانية، الأدوات المالية، الأخبار العاجلة والتحليلات لـ 250 بورصة حول العالم في 44إصدار دولي. مع وجود 21 مليون مستخدم شهريًا، وأكثر من 180 مليون جلسة، يعد
+                            موقع Investing.com واحدًا من أفضل ثلاثة مواقع مالية عالمية وفقًا لـ SimilarWeb و Alexa.
+                        </p>
+                    </div>
+                    <div class="col-lg-2 col-md-12">
+                        <h6>{{'Services'|translate}}</h6>
+                        <hr class="deep-purple text-primary accent-2 mb-4 mt-0 d-inline-block mx-auto">
+                        <ul class="list-unstyled mb-0">
+                            <li><a routerLink="spike/teamMember">{{'Our Team' |translate}}</a></li>
+                            <li><a routerLink="spike/contact">{{'Contact'|translate}}</a></li>
+                            <li><a routerLink="spike/about">{{'About'|translate}}</a></li>
+                            <li><a routerLink="spike/traders">{{'Traders Community'|translate}}</a></li>
+                            <li><a routerLink="spike/indicatorslibrary">{{'lib'|translate}}</a></li>
+                            <li><a routerLink="spike/terms">{{'Terms'|translate}}</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-12">
+                        <h6>{{'Contact'|translate}}</h6>
+                        <hr class="deep-purple  text-primary accent-2 mb-4 mt-0 d-inline-block mx-auto">
+                        <ul class="list-unstyled mb-0" *ngFor="let s of taskArr">
+
+                            <li>
+                                <a href="#"><i class="fa fa-envelope ml-3 text-primary"></i> {{s.email}}</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-phone ml-3 text-primary"></i> {{s.phone1}}</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-phone ml-3 text-primary"></i> {{s.phone2}}</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-phone ml-3 text-primary"></i> {{s.phone3}}</a>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled list-inline mt-3">
+
+                            <li class="list-inline-item">
+                                <a target="_blank" href="https://www.facebook.com/SpikeFastOfficial" class="btn-floating btn-sm rgba-white-slight mx-1 waves-effect waves-light">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+
+                            <li class="list-inline-item">
+                                <a href="https://twitter.com/Spike_fast" target="_blank" class="btn-floating btn-sm rgba-white-slight mx-1 waves-effect waves-light">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a target="_blank" href="https://www.youtube.com/c/spikefast" class="btn-floating btn-sm rgba-white-slight mx-1 waves-effect waves-light">
+                                    <i class="fa fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a target="_blank" href="https://www.instagram.com/spikefastofficial" class="btn-floating btn-sm rgba-white-slight mx-1 waves-effect waves-light">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <h6>{{'Subscribe'|translate}}</h6>
+                        <hr class="deep-purple  text-primary accent-2 mb-4 mt-0 d-inline-block mx-auto">
+                        <div class="clearfix"></div>
+                        <div class="input-group w-100">
+                            <input type="text" class="form-control br-tl-3  br-bl-3 " placeholder="{{'Email'|translate}}">
+                            <div class="input-group-append ">
+                                <button type="button" class="btn btn-primary br-tr-3  br-br-3">
+                                  {{'Subscribe'|translate}} </button>
+                            </div>
+                        </div>
+                        <h6 class="mb-0 mt-5">{{'Payments'|translate}}</h6>
+                        <hr class="deep-purple  text-primary accent-2 mb-2 mt-3 d-inline-block mx-auto">
+                        <div class="clearfix"></div>
+                        <ul class="footer-payments">
+                            <li class="pr-0"><a href="javascript:;"><i class="fa fa-cc-amex" aria-hidden="true"></i></a>
+                            </li>
+                            <li><a href="javascript:;"><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
+                            <li><a href="javascript:;"><i class="fa fa-credit-card-alt" aria-hidden="true"></i></a></li>
+                            <li><a href="javascript:;"><i class="fa fa-cc-mastercard" aria-hidden="true"></i></a></li>
+                            <li><a href="javascript:;"><i class="fa fa-cc-paypal" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <h6>{{'Risks'|translate}}</h6>
+                        <hr class="deep-purple  accent-2 mb-4 mt-0 d-inline-block mx-auto">
+                        <p class="mb-0">
+                            تحذير المخاطر: ينطوي التداول في الأدوات المالية و/ أو العملات الرقمية على مخاطر عالية بما في ذلك مخاطر فقدان بعض أو كل مبلغ الاستثمار الخاص بك، وقد لا يكون مناسبًا لجميع المستثمرين. فأسعار العملات الرقمية متقلبة للغاية وقد تتأثر بعوامل خارجية مثل الأحداث
+                            المالية أو السياسية. كما يرفع التداول على الهامش من المخاطر المالية. قبل اتخاذ قرار بالتداول في الأدوات المالية أو العملات الرقمية، يجب أن تكون على دراية كاملة بالمخاطر والتكاليف المرتبطة بتداول الأسواق المالية، والنظر بعناية
+                            في أهدافك الاستثمارية، مستوى الخبرة، الرغبة في المخاطرة وطلب المشورة المهنية عند الحاجة. Fusion Media تود تذكيرك بأن البيانات الواردة في هذا الموقع ليست بالضرورة دقيقة أو في الوقت الفعلي. لا يتم توفير البيانات والأسعار على
+                            الموقع بالضرورة من قبل أي سوق أو بورصة، ولكن قد يتم توفيرها من قبل صانعي السوق، وبالتالي قد لا تكون الأسعار دقيقة وقد تختلف عن السعر الفعلي في أي سوق معين، مما يعني أن الأسعار متغيرة باستمرار وليست مناسبة لأغراض التداول. لن
+                            تتحمل Fusion Media وأي مزود للبيانات الواردة في هذا الموقع مسؤولية أي خسارة أو ضرر نتيجة لتداولك، أو اعتمادك على المعلومات الواردة في هذا الموقع. يحظر استخدام، تخزين، إعادة إنتاج، عرض، تعديل، نقل أو توزيع البيانات الموجودة
+                            في هذا الموقع دون إذن كتابي صريح مسبق من Fusion Media و/ أو مزود البيانات. جميع حقوق الملكية الفكرية محفوظة من قبل مقدمي الخدمات و/ أو تبادل تقديم البيانات الواردة في هذا الموقع. قد يتم تعويض Fusion Media عن طريق المعلنين الذين
+                            يظهرون على الموقع الإلكتروني، بناءً على تفاعلك مع الإعلانات أو المعلنين.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-dark  text-white p-0">
+            <div class="container">
+                <div class="row d-flex">
+                    <div class="col-lg-12 col-sm-12 mt-3 mb-3 text-center ">
+                        <a href="https://spikefast.ly" class="fs-14 text-primary"> </a>
+                        <a class="fs-14 text-primary"> </a> {{'Copyright © 2022 All rights reserved SpikeFast'|translate}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+<!--/Footer Section-->

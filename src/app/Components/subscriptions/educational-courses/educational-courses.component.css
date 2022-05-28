@@ -1,0 +1,17 @@
+@media (max-width: 420px) {
+    .new {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 421px) {
+    .new {
+        font-size: 15px;
+    }
+}
+
+@media (min-width:450px) and (max-width: 768px) {
+    .cover-image {
+        height: 300px;
+    }
+}

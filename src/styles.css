@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+
+
+html, body {
+   font-family:Cairo; 
+
+}
+a{
+  cursor: pointer;
+}
+
+.toast-success {
+    background-color: #51a351;
+  }
+  .toast-error {
+    background-color: #bd362f;
+  }
+  .toast-info {
+    background-color: #2f96b4;
+  }
+  .toast-warning {
+    background-color: #f89406;
+  }
+  .ng-bar-placeholder{
+    height: 5px !important;
+    color: yellow !important;
+  }
+  .progress-bar{
+    height: 15px !important;
+    background-color:black !important;  
+    
+    }

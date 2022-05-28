@@ -1,0 +1,119 @@
+<section>
+    <div class="bannerimg">
+        <div class="header-text mb-0">
+            <div class="container">
+                <div class="text-center text-white" style="overflow: hidden" *ngFor="let detail of taskArr">
+                    <h1 style="color:#9d4edd;font-family:Cairo;" class="">{{detail.titleA}}</h1>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Breadcrumb-->
+<!--/Section-->
+
+<!--Section-->
+<section class="sptb">
+    <div class="container">
+        <div class="row">
+            <div class=" mx-auto  col-lg-12 col-md-12 col-sm-12 b">
+                <div class="card blog-detail col-lg-7 col-md-7 col-sm-12 ">
+                    <div *ngFor="let detail of taskArr" class="card-body">
+                        <div style="display: flex; flex-direction: row;">
+                            <div class="item7-card-img">
+                                <img src="{{imageHost+detail.image}}" alt="img" style="width: 75px;max-height: 109px;
+                                height: 100%;
+                                margin-left: 14px;">
+                            </div>
+                            <div class="item7-card-desc d-flex mb-2 mt-3" style="display: flex;flex-direction: column; align-items: flex-start; margin-right: 10px;overflow: hidden;">
+                                <a class="text-dark">
+                                    <p class="font-weight-semibold">{{detail.titleA}}</p>
+                                </a>
+                                <div class="test">
+                                    <a class="text-muted "><i class="fa fa-user-o text-muted ml-2"></i>{{detail.publisher}}</a>
+
+                                    <a class="text-muted "><i class="fa fa-calendar-o ml-2"></i>{{detail.createdOn|date:'short'}}</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top:10px">
+                            <p [innerHtml]="detail.descA"></p>
+                        </div>
+
+
+
+                        <div *ngFor="let img of taskArrimg" class="card-body">
+                            <div class="item7-card-img" style="display: flex; justify-content: center;">
+                                <img src="{{imageHost+img.image}}" style="height: 340px;" alt="img" class="w-100">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card col-lg-5 col-md-5 col-sm-12">
+                    <div class="card-header">
+                        <h3 class="card-title">{{"Training courses and electronic trading seminars"|translate}}</h3>
+                    </div>
+                    <div class="card-body">
+                        <div *ngFor="let lec of lecture.slice(0,1)" style="    background-color: #f6f6f6;">
+                            <div>
+                                <a [routerLink]="['/spike/schedualoftrading']"><img style="height:170px;" class="d-block w-100" alt="" src="{{imageHost+lec.image}}"></a>
+                            </div>
+                            <div>
+                                <a [routerLink]="['/spike/schedualoftrading']">
+                                    <h3>{{lec.title}}</h3>
+                                </a>
+                            </div>
+                            <div>
+                                <a class="ml-4"><span class="text-muted fs-13"><i class="fa fa-clock-o text-muted ml-1"></i> {{lec.date|date:'short'}}</span></a>
+                            </div>
+                            <div style="margin-bottom: 35px;">
+                                <h3>أ.{{lec.speakers}}</h3>
+                            </div>
+                            <div style="display: flex;justify-content: space-between;">
+                                <h4>مجانا عبر الانترنت</h4>
+                                <a style="color:white ;width: 85px;" (click)="create(lec.id)" class="btn btn-primary b2">سجل الان</a>
+                            </div>
+                        </div>
+
+                        <div *ngFor="let lec of lecture.slice(1,3)" style="    margin-top: 60px;">
+                            <div style="display: flex; flex-direction: row; ">
+                                <div>
+                                    <a [routerLink]="['/spike/schedualoftrading']"><img style="height:170px;     height: 80px;
+                                      width: 80px;
+                                      border-radius: 50px;
+                                      margin: 8px;
+                                  " class="d-block" alt="" src="{{imageHost+lec.image}}"></a>
+                                </div>
+
+                                <div style="display: flex; flex-direction: column; justify-content: center;" class="b3">
+                                    <a [routerLink]="['/spike/schedualoftrading']">
+                                        <p style="margin: 0;">{{lec.title}}</p>
+                                    </a>
+                                    <a class="ml-4"><span class="text-muted fs-13"><i class="fa fa-clock-o text-muted ml-1"></i> {{lec.date|date:'short'}}</span></a>
+                                    <p>أ.{{lec.speakers}}</p>
+                                </div>
+                            </div>
+
+                            <div style="display: flex;justify-content: space-between; margin-top: 50px;">
+                                <h4>مجانا عبر الانترنت</h4>
+                                <a style="color:white ;width: 85px;" (click)="create(lec.id)" class="btn btn-primary">سجل الان</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+</section>

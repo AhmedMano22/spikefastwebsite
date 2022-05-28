@@ -1,0 +1,34 @@
+@media (min-width: 768px) {
+    .b {
+        display: flex;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+    .b2 {
+        height: 38px;
+    }
+}
+
+@media (min-width: 768px) {
+    .b3 {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .b3 {
+        margin-right: 20px;
+    }
+}
+
+.test {
+    display: flex;
+}
+
+@media (max-width: 991px) {
+    .test {
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,159 @@
+{
+    "HOME": "الرئيسية",
+    "LOGIN": "تسجيل الدخول",
+    "Register": "التسجيل",
+    "Forgot Password": "هل نسيت كلمة السر؟",
+    "Don't have account?": "ليس لديك حساب؟",
+
+
+    "Choose Main Image": "اختيار صورة رئيسية",
+    "First Name": "الاسم الاول",
+    "Last Name": "الاسم الاخير",
+    "Phone": "رقم الهاتف",
+    "Email": "البريد الالكتروني",
+    "Password": "كلمة المرور",
+    "Location": "الموقع الجغرافي",
+    "Send": "ارسال",
+
+    "Already have an account?": "هل لديك حساب؟",
+    "subscribe": "اشتراك",
+    "اسهم": "اسهم",
+    "عملات رقميه": "عملات رقميه",
+    "عملات اجنبيه": "عملات اجنبيه",
+
+
+    "Copyright © 2022 All rights reserved SpikeFast": "جميع الحقوق محفوظه لسنة 2022 , لموقع سبايك فاست",
+
+    "LOG_OUT": "تسجيل الخروج",
+    "Language": "اللغه",
+    "English": "الانجليزيه",
+    "Arabic": "العربية",
+    "About": "نبذة عنا",
+    "Contact": "تواصل معنا",
+    "Books": "الكتب",
+    "Speakers": "متحدثون",
+    "Terms": "الشروط والاحكام",
+    "Payments": "طرق الدفع",
+    "Subscribe": "متابعه",
+    "Services": "الخدمات",
+    "Our Team": "فريق العمل",
+    "Blog": "مقالات",
+    "Market Analysis": "تحليلات الاسواق",
+    "Educational Library": "المكتبة التعليمية",
+    "Main Notepad": "المفكره الاقتصاديه",
+    "Forex Market Analysis": " الفوركس",
+    "Commodity Analysis": " السلع",
+    "CryptoCurrency Analysis": " العملات الرقمية",
+    "Stock Market Shares": "الاسهم",
+    "Traders Community": "مجتمع المتداولين",
+    "Upcoming courses and seminars": "الدورات  والندوات القادمه",
+    "Commodities Community": "مجتمع السلع",
+    "Forex Community": "مجتمع الفوركس",
+    "Cryptocurrency community": "مجتمع العملات الرقمية",
+    "Traders": "المتداولون",
+    "Schedule of trading seminars and meetings": "جدول ندوات التداول واللقاءات ",
+    "Trading education books in the financial markets": "كتب تعليم التداول في الاسواق المالية",
+    "indicators library": "مكتبة المؤشرات",
+    "educational articles": "مقالات تعليمية",
+    "currency converter": "محول العملات",
+    "Market working hours": "اوقات عمل السوق",
+    "Trading Companies": "شركات التداول",
+    "Cryptocurrency": "العملات الرقمية",
+    "Forex": "الفوركس",
+    "Risks": "المخاطر",
+    "Training courses and electronic trading seminars": "الدورات التدريبية و ندوات التداول الإلكترونية",
+    "Time": "الوقت",
+    "Currancy": "العملة",
+    "value": "الاهميه",
+    "Event": "الحدث",
+    "True": "الحقيقي",
+    "Expect": "المتوقع",
+    "Previous": "السابق",
+    "Seminars lecturer": "المحاضرون",
+    "Categories": "التصنيفات",
+    "My Profile": "الملف الشخصي",
+    "Inbox": "الخاص",
+    "Notifications": "الاشعارات",
+    "more": "المزيد",
+    "link": "الرابط",
+    "Youtube": "اليوتيوب",
+    "Log out": "تسجيل الخروج",
+    "Cookies & Privacy": "ملفات الارتباط والخصوصيه",
+    "Account Settings": "اعدادات الحساب",
+    "Forex market currency trading": "سوق الفوركس تداول العملات",
+    "Technical analysis in the currency market": "التحليل الفني في سوق العملات",
+    "Technical Analysis Tools": "أدوات التحليل الفني",
+    "Forex Brokers": "وسطاء الفوركس",
+    "Cryptocurrency Brokers": "وسطاء العملات الرقمية",
+    "Brokerage Companies Directory": "دليل شركات الوساطة",
+    "Brokerage Companies Directory - Cryptocurrency Companies": "دليل شركات الوساطة - شركات العملات الرقمية",
+    "Broker Name": "اسم الوسيط",
+    "Main Country": "المقر الرئيسي",
+    "Media Type": "ﻧﻮﻉ اﻟﻮﺳﻴﻂ",
+    "Oversight Bodies": "اﻟهيئات الرقابية",
+    "Minimum Account Amount": "أقل مبلغ للحساب",
+    "Registration Explanation": "شرح التسجيل",
+    "Register now": "سجل الان",
+    "Price": "السعر ",
+    "title": "الاسم ",
+    "currency": "العمله",
+    "rate": "التقييم ",
+    "cost": "التكلفه",
+    "update data": "تعديل البيانات",
+    "ID": "الرقم",
+    "Update": "تعديل",
+    "duration": "المدة",
+    "Publish Date": "تاريخ النشر",
+    "Image": "الصورة",
+    "Services & Subscriptions": "الخدمات والاشتراكات",
+    "educational courses": "الدورات التعليمية",
+    "private analytics": "التحليلات الخاصة",
+    "Automated Trading System": "نظام التداول الالي",
+    "Deal copy service": "خدمة نسخ الصفقات",
+    "forex training": "تدريب الفوركس",
+    "Results and evaluation of services": "النتائج وتقييم الخدمات",
+    "Results of own analyzes": "نتائج التحليلات الخاصة",
+    "Trading system results": "نتائج انظمة التداول",
+    "Copy trade results": "نتائج نسخ الصفقات",
+    "Address": "العنوان",
+    "Read More": "قراءة التفاصيل ",
+    "contact us": "لا تتردد في التواصل معنا في اي وقت ",
+    "note": "المفكره الاقتصاديه",
+    "lib": "مكتبة المؤشرات",
+    "Team Memmbers": "فريق العمل",
+    "Profile": "المعلومات",
+    "Message email": "البريد الالكتروني",
+    "Message Title": "العنوان",
+    "Phone Number": "الهاتف",
+    "Message": "الرساله",
+    "Full Name": "الاسم",
+    "Biography": "السيره الذاتيه",
+    "Results": "النتائج",
+    "Trading Pages": "صفحات التداول",
+    "Market Analysis Details": "تفاصيل التحليلات"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
